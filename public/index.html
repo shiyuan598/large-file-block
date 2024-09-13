@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunked File Download</title>
+</head>
+<body>
+    <button id="download-btn-1">Download Large File01</button>
+    <button id="download-btn-2">Download Large File02</button>
+    <button id="download-btn-3">Download Large File03</button>
+    <button id="download-btn-4">Download Large File04</button>
+
+    <script>
+        async function fetchFileRange(url, start, end) {
+            const response = await fetch(url, {
+                headers: {
+                    'Range': `bytes=${start}-${end}`
+                }
+            });
+            return await response.blob();
+        }
+
+        async function downloadLargeFile(name) {
+            const url = 'http://localhost:3000/download/' + name;  // 假设下载的文件名是 large-file.zip
+            const chunkSize = 200 * 1024 * 1024; // 10 MB 每次请求
+            const response = await fetch(url);
+            const totalSize = response.headers.get('content-length');
+
+            let start = 0;
+            const blobs = [];
+
+            while (start < totalSize) {
+                const end = Math.min(start + chunkSize - 1, totalSize - 1);
+                const blob = await fetchFileRange(url, start, end);
+                blobs.push(blob);
+                start += chunkSize;
+            }
+
+            const combinedBlob = new Blob(blobs);
+            const downloadUrl = URL.createObjectURL(combinedBlob);
+
+            // 创建下载链接并自动点击下载
+            const a = document.createElement('a');
+            a.href = downloadUrl;
+            a.download = 'large-file.zip';
+            a.click();
+        }
+
+        document.getElementById('download-btn-1').addEventListener('click', () => downloadLargeFile('01.zip'));
+        document.getElementById('download-btn-2').addEventListener('click', () => downloadLargeFile('02.zip'));
+        document.getElementById('download-btn-3').addEventListener('click', () => downloadLargeFile('03.zip'));
+        document.getElementById('download-btn-4').addEventListener('click', () => downloadLargeFile('04.zip'));
+    </script>
+</body>
+</html>
