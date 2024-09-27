@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://124.70.147.36/iot-web/jobweb/public/dataView/index.html -->
+<html lang="en" style="font-size: 23.7875px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>运营大屏</title>
+    <script src="./js/echarts.min.js"></script>
+
+    <link rel="stylesheet" href="./css/icomoon.css">
+    <link rel="stylesheet" href="./css/viewport.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+</head>
+
+<body>
+    <div class="viewport">
+        <!-- 头部 -->
+        <div class="head">
+                 <!--左列-->
+                 <div class="head-left-column">
+                    <div class="head-left-new" id="headLefNew">截止2023-6-1，智能驾驶里程突破 <span class>600</span> 公里</div>
+                 </div>
+
+                 <!--右列-->
+                 <div class="head-right-column">
+                    <div class="right-box">
+                        <div class="head-right-weather">
+                        <!-- 天气 -->
+                            <span class="text">多云</span>
+                            <span class="text">21-29°C</span>
+                        </div>
+                        <div class="head-right-timeBox">
+                        <!--时间-->
+                            <span class="time" id="time">18:23:06</span>
+                            <span class="text" id="year">2023-06-08</span>
+                        </div>
+                    </div>
+                 </div>
+        </div>
+        <div style="justify-content: center;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;padding-top: 5px;">
+          <span style="color: white; font-weight: 600;z-index: 9999;font-size: 30px;display: flex;justify-content: center;">挚途云端智能调度系统</span>
+        </div>
+        <!-- 内容 -->
+        <div class="content">
+            <!--左列-->
+            <div class="column">
+                <!--车辆信息 -->
+                <div class="card-module vehicleInformation">
+                    <div class="card-header">
+                        <div class="head-font">车辆信息</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="chart">
+                            <div class="chartItem chartLeft">
+                                <div class="chartBox">
+                                    <div id="vehicleInformation"></div>
+                                </div>
+                                <div class="chartText">
+                                    <div class="title">智能驾驶率</div>
+                                    <div class="number">96%</div>
+                                </div>
+                            </div>
+                            <div class="chartItem chartRight">
+                                <div class="chartRightItem">
+                                    <div class="item">
+                                         <div class="text">
+                                             <span class="unit">车人比</span>
+                                             <span class="number" id="vehicleDriverProp">1:1.5</span>
+                                         </div>
+                                        <div class="progress">
+                                            <div class="bar" id="vehicleDriverPropBar" style="width: 40%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                         <div class="text" >
+                                             <span class="unit">车挂比</span>
+                                             <span class="number" id="vehicleTrailerProp">1:2</span>
+                                         </div>
+                                        <div class="progress">
+                                            <div class="bar" id="vehicleTrailerPropBar" style="width: 33%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dataBar">
+                            <div class="item">
+                                <div class="title">智能车辆</div>
+                                <div class="number">
+                                    <span id="intelligentVehicle">77</span>
+                                    <span class="unit">台</span>
+                                </div>
+                            </div>
+                            <!-- <div class="item">
+                                <div class="title">传统车辆</div>
+                                <div class="number">21<span class="unit">台</span></div>
+                            </div> -->
+                            <div class="item">
+                                <div class="title">驾驶人员</div>
+                                <div class="number">
+                                    <span id="driverCount">132</span>
+                                    <span class="unit">人</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="title">挂车数量</div>
+                                <div class="number">
+                                    <span id="trailerVehicleCount">186</span>
+                                    <span class="unit">台</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--智能驾驶里程 -->
+                <div class="card-module intelligentDrivingRange">
+                    <div class="card-header">
+                        <div class="head-font">智能驾驶里程</div>
+                    </div>
+                    <div class="card-content">
+                        <div id="intelligentDrivingRange"></div>
+                    </div>
+                </div>
+
+                <!--里程变化统计 -->
+                <div class="card-module mileageChangeStatistics">
+                    <div class="card-header">
+                        <div class="head-font">运营油耗统计</div>
+                    </div>
+                    <div class="card-content">
+                        <div id="mileageChangeStatistics"></div>
+                    </div>
+                </div>
+
+                <!--百公里油耗 TOP10 -->
+                <div class="card-module oilConsumption">
+                    <div class="card-header">
+                        <div class="head-font">油耗统计 TOP10</div>
+                        <div class="unit">单位：L</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="swiper oilConsumptionSwiper">
+                            <div class="swiper-wrapper"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--中列-->
+            <div class="column middle-column" >
+                <!-- 统计 -->
+                <div class="map">
+                    <div class="item totalMileage">
+                        <span class="title">运营里程</span>
+                        <div class="text"><span class="number" id="queryOperateMileage">0</span><span class="unit">万公里</span></div>
+                    </div>
+                    <div class="item autoDrivingMileage">
+                        <span  class="title">智能驾驶里程</span>
+                        <div class="text"><span class="number" id="queryIntelligentMileage">0</span><span class="unit">万公里</span></div>
+                    </div>
+                    <div class="item AccumulatedCustomerService">
+                        <span  class="title">累计服务客户</span>
+                        <div class="text"><span class="number" id="queryCustom">46</span><span class="unit">家</span></div>
+                    </div>
+                    <div class="item cityCount">
+                        <span  class="title">覆盖城市</span>
+                        <div class="text"><span class="number" id="queryCity">98</span><span class="unit">座</span></div>
+                    </div>
+                    <div class="item operationRoute" >
+                        <span  class="title">运营线路</span>
+                        <div class="text"><span class="number" id="queryRoute">68</span><span class="unit">条</span></div>
+                    </div>
+                </div>
+
+                <!-- 地图 -->
+                <div class="geoBox">
+                    <div id="geo"></div>
+                    <img id="contentBg" src="./images/contentBg.png" alt="">
+                </div>
+
+                <!--宣传 publicize-->
+                <!-- <div class="card-module publicize">
+                    <div class="card-header">
+                        <div class="head-font">宣传</div>
+                    </div>
+                    <div class="card-content">
+
+                        <video class="publicizeBg" autoplay loop muted>
+                            <source src="./images/宣传.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div> -->
+                <!--服务客户 Serving customers-->
+               <div class="card-module servingCustomers">
+                <div class="card-header">
+                    <div class="head-font">服务客户</div>
+                </div>
+                <div class="card-content">
+                    <img class="servingCustomersBg" src="./images/servingCustomersBg.png">
+                </div>
+            </div>
+            </div>
+
+            <!--右列-->
+            <div class="column columnRight">
+               <!--累计运营订单 order for goods-->
+               <div class="card-module orderForGoods">
+                    <div class="card-header">
+                        <div class="head-font">累计运营订单</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="chartBox">
+                            <div id="orderForGoods"></div>
+                        </div>
+<!--                        <div class="chartText">-->
+<!--                            <div class="contentBox">-->
+<!--                                <div class="item itemA"><span class="title">L2车辆完成订单</span> <span class="number">5572</span></div>-->
+<!--                                <div class="item itemB"><span class="title">L3车辆完成订单</span> <span class="number">1499</span></div>-->
+<!--                                <div class="item itemC"><span class="title">传统车辆完成订单</span> <span class="number">891</span></div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+               <!--订单统计 Order statistics-->
+               <div class="card-module statistics">
+                    <div class="card-header">
+                        <div class="head-font">订单统计</div>
+                    </div>
+                    <div class="card-content">
+                        <div id="statistics"></div>
+                    </div>
+                </div>
+               <!--订单实时追踪 Real time tracking of orders-->
+               <div class="card-module realTimeTrackingOfOrders">
+                    <div class="card-header">
+                        <div class="head-font">订单实时追踪</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="ordersBox">
+                            <div class="ordersHeader ordersItem">
+                                <div class="line">线路</div>
+                                <div class="licensePlate">车牌号</div>
+                                <div class="state">状态</div>
+                            </div>
+                            <div class="swiper ordersSwiper">
+                                <div class="swiper-wrapper"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               <!--服务客户 Serving customers-->
+               <!-- <div class="card-module servingCustomers">
+                    <div class="card-header">
+                        <div class="head-font">服务客户</div>
+                    </div>
+                    <div class="card-content">
+                        <img class="servingCustomersBg" src="./images/servingCustomersBg.png">
+                    </div>
+                </div> -->
+                <!--宣传 publicize-->
+
+              <div class="card-module lastMounthConsumption">
+                <div class="card-header">
+                  <div class="head-font">车辆行驶里程 TOP10</div>
+                  <div class="unit">单位：km</div>
+                </div>
+                <div class="card-content">
+                  <div class="swiper lastMounthConsumptionSwiper">
+                    <div class="swiper-wrapper"></div>
+                  </div>
+                </div>
+              </div>
+
+<!--                <div class="card-module publicize" style="height: 28%;">-->
+<!--                    <div class="card-header">-->
+<!--                        <div class="head-font">宣传</div>-->
+<!--                    </div>-->
+<!--                    <div class="card-content">-->
+<!--                        &lt;!&ndash; <img class="publicizeBg" src="./images/publicizeBg.png"> &ndash;&gt;-->
+<!--                        <video class="publicizeBg" autoplay loop muted>-->
+<!--                            <source src="./images/宣传.mp4" type="video/mp4">-->
+<!--                        </video>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/china.js"></script>
+<script src="./js/mymap.js"></script>
+<script src="./js/viewport.js"></script>
+
+
+</body></html>

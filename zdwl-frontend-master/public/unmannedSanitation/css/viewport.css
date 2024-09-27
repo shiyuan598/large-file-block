@@ -1,0 +1,1157 @@
+html,
+body {
+  /* 限定大小 */
+  min-width: 1500px;
+  min-height: 900px;
+  max-width: 1920px;
+  height: 100%;
+  width: 100%;
+  line-height: 1.5;
+  font-size: 0.5rem;
+  margin: 0;
+  padding: 0;
+  background: url(../images/body.png) 100% no-repeat;
+  /* 让背景图基于容器大小伸缩 */
+  background-size: cover;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.viewport {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: rgba(0, 0, 0, 0.56);
+  display: flex;
+}
+.viewport .head {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 7%;
+  width: calc(100% - 20px);
+  background: url(../images/headerBG.png) 100% no-repeat;
+  background-size: 100%;
+}
+.viewport .head .head-left-column {
+  width: 30%;
+}
+.viewport .head .head-left-column .head-left-new::before {
+  display: block;
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: url(../images/newIcon.png) 100% no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 4.6%;
+}
+.viewport .head .head-left-column .head-left-new {
+  width: 30%;
+  padding-left: 2.5%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #BECBE8;
+  line-height: 17px;
+}
+.viewport .head .head-right-column {
+  position: relative;
+  float: right;
+  width: 10%;
+  height: 100%;
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #F4F4FA;
+  line-height: 17px;
+}
+.viewport .head .head-right-column .right-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  left: 0;
+  margin: auto;
+  height: 50px;
+}
+.viewport .head .head-right-column .right-box .text {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.viewport .head .head-right-column .right-box .head-right-weather {
+  float: left;
+  width: 50%;
+  display: block;
+  padding-top: 10px;
+}
+.viewport .head .head-right-column .right-box .head-right-timeBox {
+  float: left;
+  width: 50%;
+  display: block;
+}
+.viewport .head .head-right-column .right-box .head-right-timeBox .time {
+  font-size: 24px;
+  line-height: 28px;
+}
+.viewport .head .head-right-column .right-box .head-right-timeBox::before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 54%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 2px;
+  height: 60%;
+  background: #5A5A89;
+}
+.viewport .content {
+  position: absolute;
+  top: 8%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 94%;
+  height: 91%;
+  display: flex;
+  justify-content: space-between;
+}
+.viewport .content .column {
+  flex: 2;
+  position: relative;
+  padding-right: 1%;
+}
+.viewport .content .column.middle-column {
+  flex: 5;
+  margin: 1.333rem 0.5rem 0;
+}
+.viewport .content .card-module {
+  width: 100%;
+  height: 26%;
+  padding-bottom: 5%;
+}
+.viewport .content .card-module .card-header {
+  position: relative;
+  padding-left: 30px;
+  height: 28px;
+  line-height: 28px;
+  background: url(../images/cardHeader.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .card-module .card-header .head-font {
+  font-size: 14px;
+  color: #F4F4FA;
+}
+.viewport .content .card-module .card-content {
+  padding-top: 4px;
+  height: 90%;
+}
+.viewport .content .card-module .card-content .contentBg {
+  width: 100%;
+  height: 100%;
+}
+.viewport .content .card-module:nth-child(4) {
+  padding-bottom: 0;
+  height: 22%;
+}
+.viewport .content .servingCustomers {
+  padding-bottom: 0;
+  height: 23%;
+}
+.viewport .content .servingCustomers .card-content {
+  position: relative;
+}
+.viewport .content .servingCustomers .imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.viewport .content .servingCustomers .imgBox .img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 15%;
+}
+.viewport .content .servingCustomers .imgBox .img[rank="1"] {
+  width: 25%;
+}
+.viewport .content .servingCustomers .imgBox .img[rank="2"] {
+  width: 20%;
+}
+.viewport .content .servingCustomers .imgBox .img[number="2"] {
+  right: inherit;
+  left: 14%;
+}
+.viewport .content .servingCustomers .imgBox .img[number="3"] {
+  right: 18%;
+  left: inherit;
+}
+.viewport .content .servingCustomers .imgBox .img[number="9"] {
+  top: 15%;
+  bottom: inherit;
+  right: 2%;
+  left: inherit;
+}
+.viewport .content .servingCustomers .imgBox .img[number="4"] {
+  top: -5%;
+  bottom: inherit;
+  left: 26%;
+  right: inherit;
+}
+.viewport .content .servingCustomers .imgBox .img[number="5"] {
+  top: 0;
+  bottom: inherit;
+  left: 50%;
+  right: inherit;
+}
+.viewport .content .servingCustomers .imgBox .img[number="11"] {
+  top: -3%;
+  bottom: inherit;
+  right: 17%;
+  left: inherit;
+}
+.viewport .content .servingCustomers .imgBox .img[number="10"] {
+  top: inherit;
+  bottom: 8%;
+  left: 6%;
+  right: inherit;
+}
+.viewport .content .servingCustomers .imgBox .img[number="7"] {
+  top: inherit;
+  bottom: 0;
+  right: 52%;
+  left: inherit;
+}
+.viewport .content .servingCustomers .imgBox .img[number="8"] {
+  top: inherit;
+  bottom: 0;
+  right: 28%;
+  left: inherit;
+}
+.viewport .content .servingCustomers .imgBox .img[number="6"] {
+  top: inherit;
+  bottom: 6%;
+  right: 6%;
+  left: inherit;
+}
+.viewport .content .servingCustomers .imgBgBox {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.viewport .content .servingCustomers .imgBgBox .imgBg {
+  position: absolute;
+  width: 10%;
+  top: 0;
+  right: 0;
+}
+.viewport .content .servingCustomers .imgBgBox .imgBg[index="1"] {
+  top: 0;
+  right: 8%;
+}
+.viewport .content .servingCustomers .imgBgBox .imgBg[index="2"] {
+  top: 50%;
+  right: 0;
+}
+.viewport .content .servingCustomers .imgBgBox .imgBg[index="3"] {
+  top: initial;
+  right: inherit;
+  bottom: 42%;
+  left: 2%;
+  width: 15%;
+}
+.viewport .content .servingCustomers .imgBgBox .imgBg[index="4"] {
+  top: initial;
+  right: inherit;
+  bottom: 18%;
+  left: 23%;
+}
+.viewport .content .servingCustomers .imgBgBox .imgBg[index="5"] {
+  bottom: 12%;
+  top: initial;
+  right: 22%;
+}
+.viewport .content .servingCustomers .imgBgBox .imgBg[index="6"] {
+  top: 19%;
+  right: 24%;
+}
+.viewport .content .servingCustomers .imgBgBox .imgBg[index="7"] {
+  top: 21%;
+  left: 21%;
+}
+.viewport .content .servingCustomers .imgBgBox .imgBg[index="8"] {
+  top: 16%;
+  left: 11%;
+}
+.viewport .content .servingCustomers .servingCustomersBg {
+  position: absolute;
+  max-height: 100%;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.viewport .content .vehicleInformation .card-header::before {
+  display: block;
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 8px;
+  margin: auto;
+  background: url(../images/vehicleInformation.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .intelligentDrivingRange .card-header::before {
+  display: block;
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 8px;
+  margin: auto;
+  background: url(../images/intelligentDrivingRange.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .mileageChangeStatistics .card-header::before {
+  display: block;
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 8px;
+  margin: auto;
+  background: url(../images/intelligentDrivingRange.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .oilConsumption .card-header::before {
+  display: block;
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 8px;
+  margin: auto;
+  background: url(../images/oilConsumption.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .publicize .card-header::before {
+  display: block;
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 8px;
+  margin: auto;
+  background: url(../images/publicize.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .orderForGoods .card-header::before {
+  display: block;
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 8px;
+  margin: auto;
+  background: url(../images/orderForGoods.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .statistics .card-header::before {
+  display: block;
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 8px;
+  margin: auto;
+  background: url(../images/statistics.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .realTimeTrackingOfOrders .card-header::before {
+  display: block;
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 8px;
+  margin: auto;
+  background: url(../images/realTimeTrackingOfOrders.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .servingCustomers .card-header::before {
+  display: block;
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 8px;
+  margin: auto;
+  background: url(../images/servingCustomers.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .publicize {
+  padding: 0;
+  height: 30%;
+}
+.viewport .content .publicize .card-content {
+  position: relative;
+}
+.viewport .content .publicize .publicizeBg {
+  position: absolute;
+  height: 100%;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.viewport .content .middle-column .map {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.viewport .content .middle-column .map .item {
+  position: relative;
+  width: 19%;
+  background: url(../images/itemBg.png) 100% no-repeat;
+  background-size: 100% 100%;
+  padding: 2% 1% 2% 6.5%;
+}
+.viewport .content .middle-column .map .item .title {
+  margin-top: 6px;
+  width: 100%;
+  height: 12px;
+  font-size: 14px;
+  display: block;
+  font-weight: 400;
+  color: #F4F4FA;
+  line-height: 2px;
+  background: linear-gradient(90deg, rgba(50, 144, 255, 0.74) 0%, rgba(50, 112, 255, 0) 100%);
+  white-space: nowrap;
+}
+.viewport .content .middle-column .map .item .text {
+  font-size: 16px;
+  font-family: DINAlternate-Bold, DINAlternate;
+  font-weight: bold;
+  color: #F4F4FA;
+  line-height: 2;
+}
+.viewport .content .middle-column .map .item .text .number {
+  max-width: 81%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  float: left;
+}
+.viewport .content .middle-column .map .item .text .unit {
+  font-size: 12px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+  font-weight: 400;
+  color: #FFD356;
+  float: left;
+  line-height: 34px;
+}
+.viewport .content .middle-column .map .totalMileage::before {
+  display: block;
+  content: '';
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: url(../images/totalMileage.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .middle-column .map .cityCount::before {
+  display: block;
+  content: '';
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: url(../images/cityCount.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .middle-column .map .AccumulatedCustomerService::before {
+  display: block;
+  content: '';
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: url(../images/AccumulatedCustomerService.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .middle-column .map .operationRoute::before {
+  display: block;
+  content: '';
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: url(../images/operationRoute.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .middle-column .map .autoDrivingMileage::before {
+  display: block;
+  content: '';
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: url(../images/autoDrivingMileage.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content .middle-column .geoBox {
+  position: relative;
+  width: 100%;
+  height: 67%;
+}
+.viewport .content .columnRight {
+  padding-left: 1%;
+  padding-right: 0;
+}
+.viewport .content .realTimeTrackingOfOrders {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #F4F4FA;
+}
+.viewport .content .realTimeTrackingOfOrders .ordersBox {
+  height: 100%;
+}
+.viewport .content .realTimeTrackingOfOrders .ordersSwiper {
+  height: calc(100% - 20px);
+}
+.viewport .content .realTimeTrackingOfOrders .ordersItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  line-height: 2;
+}
+.viewport .content .realTimeTrackingOfOrders .ordersItem div {
+  flex: 2;
+  width: 100%;
+  text-align: left;
+}
+.viewport .content .realTimeTrackingOfOrders .ordersItem .line {
+  flex: 4;
+}
+.viewport .content .realTimeTrackingOfOrders .ordersItem .state {
+  text-align: right;
+}
+.viewport .content .realTimeTrackingOfOrders .ordersHeader {
+  margin-bottom: 4px;
+  background: rgba(90, 90, 137, 0.2);
+  font-weight: 500;
+  color: #6191FF;
+  height: 20px;
+  line-height: 20px;
+}
+.viewport .content .realTimeTrackingOfOrders .toDeDispatched .state {
+  color: #FFD356;
+}
+.viewport .content .realTimeTrackingOfOrders .toDeDispatched .line:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1px;
+  margin: auto;
+  width: 1px;
+  height: 10px;
+  background: #FFD356;
+}
+.viewport .content .realTimeTrackingOfOrders .dispatched .line::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1px;
+  margin: auto;
+  width: 1px;
+  height: 10px;
+  background: #3270FF;
+}
+.viewport .content .realTimeTrackingOfOrders .ordersSwiper .even {
+  background: rgba(90, 90, 137, 0.2);
+}
+.viewport .content .oilConsumption .oilConsumptionSwiper {
+  height: calc(100% - 10px);
+}
+.viewport .content .oilConsumption .unit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #BECBE8;
+}
+.viewport .content .oilConsumption .oilConsumptionItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #F4F4FA;
+  height: 26px;
+  width: 100%;
+  line-height: 26px;
+}
+.viewport .content .oilConsumption .oilConsumptionItem .number {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+.viewport .content .oilConsumption .oilConsumptionItem .number span {
+  position: relative;
+  z-index: 100;
+}
+.viewport .content .oilConsumption .oilConsumptionItem .licensePlate {
+  flex: 2;
+}
+.viewport .content .oilConsumption .oilConsumptionItem .progressBox {
+  position: relative;
+  flex: 5;
+  padding-right: 10%;
+}
+.viewport .content .oilConsumption .oilConsumptionItem .progress {
+  position: absolute;
+  background: rgba(90, 90, 137, 0.4);
+  height: 4px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+}
+.viewport .content .oilConsumption .oilConsumptionItem .progress .bar {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(270deg, #78B5FF 0%, rgba(50, 112, 255, 0.2) 100%);
+}
+.viewport .content .oilConsumption .oilConsumptionItem .progress .bar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 2px;
+  height: 6px;
+  background: #6594FF;
+  box-shadow: 0px 0px 4px 0px #BECBE8;
+}
+.viewport .content .oilConsumption .oilConsumptionItem .oilConsumption {
+  flex: 1;
+}
+.viewport .content .oilConsumption .frontRow .number::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: url(../images/frontRowBG.png) 100% no-repeat;
+  background-size: 100%;
+  width: 16px;
+  z-index: 0;
+}
+.viewport .content .oilConsumption .frontRow .progress .bar {
+  background: linear-gradient(270deg, #FFEB8F 0%, rgba(255, 211, 86, 0.2) 100%);
+}
+.viewport .content .oilConsumption .frontRow .progress .bar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 2px;
+  height: 6px;
+  background: #FFA300;
+  box-shadow: 0px 0px 4px 0px #FFE496;
+}
+.viewport .content .lastMounthConsumption .lastMounthConsumptionSwiper {
+  height: calc(100% - 10px);
+}
+.viewport .content .lastMounthConsumption .unit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #BECBE8;
+}
+.viewport .content .lastMounthConsumption .lastMounthConsumptionItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #F4F4FA;
+  height: 26px;
+  width: 100%;
+  line-height: 26px;
+}
+.viewport .content .lastMounthConsumption .lastMounthConsumptionItem .number {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+.viewport .content .lastMounthConsumption .lastMounthConsumptionItem .number span {
+  position: relative;
+  z-index: 100;
+}
+.viewport .content .lastMounthConsumption .lastMounthConsumptionItem .licensePlate {
+  flex: 2;
+}
+.viewport .content .lastMounthConsumption .lastMounthConsumptionItem .progressBox {
+  position: relative;
+  flex: 5;
+  padding-right: 10%;
+}
+.viewport .content .lastMounthConsumption .lastMounthConsumptionItem .progress {
+  position: absolute;
+  background: rgba(90, 90, 137, 0.4);
+  height: 4px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+}
+.viewport .content .lastMounthConsumption .lastMounthConsumptionItem .progress .bar {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(270deg, #78B5FF 0%, rgba(50, 112, 255, 0.2) 100%);
+}
+.viewport .content .lastMounthConsumption .lastMounthConsumptionItem .progress .bar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 2px;
+  height: 6px;
+  background: #6594FF;
+  box-shadow: 0px 0px 4px 0px #BECBE8;
+}
+.viewport .content .lastMounthConsumption .lastMounthConsumptionItem .lastMounthConsumption {
+  flex: 1;
+}
+.viewport .content .lastMounthConsumption .frontRow .number::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: url(../images/frontRowBG.png) 100% no-repeat;
+  background-size: 100%;
+  width: 16px;
+  z-index: 0;
+}
+.viewport .content .lastMounthConsumption .frontRow .progress .bar {
+  background: linear-gradient(270deg, #FFEB8F 0%, rgba(255, 211, 86, 0.2) 100%);
+}
+.viewport .content .lastMounthConsumption .frontRow .progress .bar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 2px;
+  height: 6px;
+  background: #FFA300;
+  box-shadow: 0px 0px 4px 0px #FFE496;
+}
+.viewport .content .vehicleInformation {
+  color: #BECBE8;
+}
+.viewport .content .vehicleInformation .chart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  height: calc(60% - 6px);
+}
+.viewport .content .vehicleInformation .chartItem {
+  padding: 10px;
+  width: 49%;
+  background: rgba(42, 67, 120, 0.3);
+  border-radius: 8px;
+}
+.viewport .content .vehicleInformation .chartItem .chartBox {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+}
+.viewport .content .vehicleInformation .chartItem .chartText {
+  width: 50%;
+  height: 100%;
+  display: block;
+  float: right;
+}
+.viewport .content .vehicleInformation .chartItem .chartText .title {
+  font-size: 14px;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+  font-weight: 400;
+  color: #BECBE8;
+  line-height: 21px;
+  text-align: center;
+  white-space: nowrap;
+}
+.viewport .content .vehicleInformation .chartItem .chartText .number {
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+  font-weight: 400;
+  color: #F4F4FA;
+  text-align: center;
+  line-height: 1.5;
+  height: 80%;
+}
+.viewport .content .vehicleInformation .chartRightItem {
+  height: 100%;
+}
+.viewport .content .vehicleInformation .chartRightItem .item {
+  height: 50%;
+}
+.viewport .content .vehicleInformation .chartRightItem .text {
+  position: relative;
+  color: #F4F4FA;
+}
+.viewport .content .vehicleInformation .chartRightItem .text .unit {
+  color: #BECBE8;
+  font-size: 12px;
+}
+.viewport .content .vehicleInformation .chartRightItem .text .number {
+  position: absolute;
+  font-size: 22px;
+  right: 0;
+  top: -12px;
+}
+.viewport .content .vehicleInformation .chartRightItem .progress {
+  position: relative;
+  background: #3270FF;
+  height: 5px;
+  margin: auto;
+  width: 100%;
+}
+.viewport .content .vehicleInformation .chartRightItem .progress .bar {
+  position: absolute;
+  left: 0;
+  height: 5px;
+  background: #00D6B9;
+}
+.viewport .content .vehicleInformation .dataBar {
+  padding: 5px 6%;
+  margin-top: 6px;
+  height: calc(40% - 6px);
+  display: flex;
+  justify-content: space-between;
+  background: rgba(42, 67, 120, 0.3);
+  border-radius: 8px;
+  color: #BECBE8;
+  line-height: 21px;
+}
+.viewport .content .vehicleInformation .dataBar .item {
+  min-height: 80px;
+}
+.viewport .content .vehicleInformation .dataBar .item .title {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.viewport .content .vehicleInformation .dataBar .item .number {
+  font-size: 24px;
+  color: #FFF4F4FA;
+}
+.viewport .content .vehicleInformation .dataBar .item .unit {
+  font-size: 12px;
+  color: #FFD356;
+  line-height: 18px;
+}
+.viewport .content .orderForGoods {
+  height: 27%;
+}
+.viewport .content .orderForGoods .chartBox {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.viewport .content .orderForGoods .chartText {
+  display: none;
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: block;
+  float: right;
+}
+.viewport .content .orderForGoods .chartText .contentBox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 50%;
+}
+.viewport .content .orderForGoods .chartText .item {
+  position: relative;
+  font-size: 12px;
+  width: 100%;
+  color: #F4F4FA;
+  line-height: 30px;
+}
+.viewport .content .orderForGoods .chartText .item .number {
+  float: right;
+}
+.viewport .content .orderForGoods .chartText .item::after {
+  position: absolute;
+  left: -16px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #FFD356;
+}
+.viewport .content .orderForGoods .chartText .item.itemB::after {
+  position: absolute;
+  left: -16px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #00D6B9;
+}
+.viewport .content .orderForGoods .chartText .item.itemC::after {
+  position: absolute;
+  left: -16px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #3270FF;
+}
+.viewport .geoBox::after {
+  display: block;
+  content: '';
+  width: 30px;
+  height: 90%;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url('../images/geoRight.png') 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .geoBox::before {
+  display: block;
+  content: '';
+  width: 30px;
+  height: 90%;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url(../images/geoLift.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content::after {
+  display: block;
+  content: '';
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  right: -38px;
+  top: 0;
+  background: url('../images/baRightBorder.png') 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport .content::before {
+  display: block;
+  content: '';
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  left: -38px;
+  top: 0;
+  background: url(../images/baLeftBorder.png) 100% no-repeat;
+  background-size: 100% 100%;
+}
+.viewport #contentBg {
+  animation: identifier 20s infinite -5s linear;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 40%;
+}
+@keyframes identifier {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+.viewport .imgBox .img[rank="1"] {
+  animation: widthRank1 2s ease 1s ;
+}
+.viewport .imgBox .img[rank="2"] {
+  animation: widthRank2 2s infinite 4s ;
+}
+.viewport .imgBox .img[rank="3"] {
+  animation: widthRank3 2s infinite 6s ;
+}
+@keyframes widthRank1 {
+  0% {
+    width: 25%;
+  }
+  50% {
+    width: 27%;
+  }
+  100% {
+    width: 25%;
+  }
+}
+@keyframes widthRank2 {
+  0% {
+    width: 20%;
+  }
+  50% {
+    width: 22%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@keyframes widthRank3 {
+  0% {
+    width: 15%;
+  }
+  50% {
+    width: 17%;
+  }
+  100% {
+    width: 15%;
+  }
+}
+.viewport .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.viewport .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  height: 100px;
+  line-height: 100px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.viewport #geo,
+.viewport #statistics,
+.viewport #mileageChangeStatistics,
+.viewport #orderForGoods,
+.viewport #vehicleInformation,
+.viewport #intelligentDrivingRange {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+html,
+body {
+  position: relative;
+}

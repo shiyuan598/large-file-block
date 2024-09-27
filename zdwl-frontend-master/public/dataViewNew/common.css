@@ -1,0 +1,91 @@
+body * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+body,html {
+  font-family: PingFangSC-Regular, Roboto, Helvetica Neue, Helvetica, Tahoma,
+    Arial, PingFang SC-Light, Microsoft YaHei;
+  line-height: 1.5;
+  font-size: 0.5rem;
+  margin: 0;
+  padding: 0;
+  background-size: 100% 100%;
+  background: url(../images/bg.png) no-repeat fixed;
+  /* 让背景图基于容器大小伸缩 */
+  background-size: cover;
+  min-width: 1900px;
+/*background-repeat: no-repeat;*/
+  /*background-position: 0 0 / cover;*/
+  /*background-color: #000235;*/
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+input {
+  background-color: transparent;
+  border: 0;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: transparent;
+}
+
+button:active {
+  opacity: 0.6;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.justify-start {
+  display: flex;
+  justify-content: flex-start;
+}
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.justify-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+.justify-around {
+  display: flex;
+  justify-content: space-around;
+}
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+.align-start {
+  display: flex;
+  align-items: flex-start;
+}
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.align-end {
+  display: flex;
+  align-items: flex-end;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#96BCFF" offset="0%"></stop>
+            <stop stop-color="#81A4F2" offset="48.4620617%"></stop>
+            <stop stop-color="#6677EF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-1201, -639)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="编组-66" transform="translate(61, 70)">
+                <g id="编组-47" transform="translate(224, 116)">
+                    <g id="编组-55" transform="translate(896, 433)">
+                        <g id="编组-49" transform="translate(20, 18)">
+                            <g id="编组" transform="translate(0, 2)">
+                                <path d="M11,0 C17.0755573,0 22,4.92444277 22,11 C22,17.0755573 17.0755572,22 11,22 C4.92444279,22 0,17.0755572 0,11 C0,4.92444277 4.92444277,0 11,0 Z M11,2.19999999 C6.13955421,2.19999999 2.19999999,6.13955421 2.19999999,11 C2.19999999,15.8604458 6.13955421,19.8 11,19.8 C15.8604458,19.8 19.8,15.8604458 19.8,11 C19.8,6.13955423 15.8604458,2.19999999 11,2.19999999 Z M15.0500945,5.63422744 L16.9159804,6.80030222 L10.8321118,16.5328296 C10.5928989,16.9146294 10.1451095,17.1120372 9.70189306,17.0310861 C9.25867663,16.950135 8.90958145,16.6071805 8.82077825,16.1654703 L7.34801663,8.8 L5.49958445,8.8 L5.49958445,6.6 L8.25062335,6.6 C8.77423499,6.6 9.22553835,6.96985266 9.32859841,7.48432188 L10.4348319,13.0179826 L15.0500945,5.63422744 Z" id="形状结合"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
