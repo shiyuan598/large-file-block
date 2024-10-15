@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>高速产品介绍大屏</title>
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/media-query.css">
+</head>
+
+<body>
+  <div class="page flex-col">
+    <div class="main flex-col">
+      <div class="title flex-row">
+        <div class="left"></div>
+        <div class="text"></div>
+        <div class="right"></div>
+      </div>
+      <div class="info flex-row">
+        <div class="left">
+          <span class="divider"></span>
+          <div class="text-group">
+            <div class="logo"></div>
+            <span class="divider__mini"></span>
+            <div class="location">
+              <div class="location_icon"></div>
+              <div class="location_text">苏州</div>
+            </div>
+            <span class="text" id="timeDate">2024-10-15</span>
+          </div>
+          <span class="divider"></span>
+        </div>
+        <div class="right">
+          <span class="divider"></span>
+          <div class="text-group">
+            <div class="weather">
+              <div class="weather_icon"></div>
+              <div class="weather_text">晴天</div>
+            </div>
+            <span class="divider__mini"></span>
+            <span class="text week" id="week">星期二</span>
+            <span class="text" id="time">16:02:35</span>
+          </div>
+          <span class="divider"></span>
+        </div>
+      </div>
+      <div class="content flex-row">
+        <div class="menu-container"></div>
+        <div class="video-container">
+          <div class="inner">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <script src="./js/index.js"></script>
+  <script src="./js/jquery.min.js"></script>
+</body>
+
+</html>

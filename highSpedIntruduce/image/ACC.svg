@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="23px" viewBox="0 0 36 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ACC</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#C5D8FE" offset="0%"></stop>
+            <stop stop-color="#B6CEFF" offset="63.1358712%"></stop>
+            <stop stop-color="#9DBCFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#C5D8FE" offset="0%"></stop>
+            <stop stop-color="#B6CEFF" offset="63.1358712%"></stop>
+            <stop stop-color="#9DBCFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#C5D8FE" offset="0%"></stop>
+            <stop stop-color="#B6CEFF" offset="63.1358712%"></stop>
+            <stop stop-color="#9DBCFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#C5D8FE" offset="0%"></stop>
+            <stop stop-color="#B6CEFF" offset="63.1358712%"></stop>
+            <stop stop-color="#9DBCFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="大屏修改" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="高速产品大屏备份" transform="translate(-106, -259)">
+            <g id="ACC" transform="translate(107, 259.9726)">
+                <path d="M18.4960967,0 C16.8478684,2.27447936 15.19964,4.54895873 13.5514117,6.82343809 C13.3773157,7.06368252 13.102317,7.21040852 12.805822,7.22124863 L9.58863807,7.33887171 C9.28873651,7.34983637 9.01103588,7.49980388 8.83739394,7.74456836 L6.5,11.0393427 L6.5,11.0393427 L6.5,14.7035421 C6.5,15.7686627 7.36345084,16.6321135 8.42857143,16.6321135 L11.6490078,16.6321135 L11.6490078,16.6321135 C11.3870771,19.5413236 12.3106755,20.9959286 14.419803,20.9959286 C16.5289304,20.9959286 17.5461965,19.4694891 17.4716012,16.4166102 L23.9472802,16.4166102 C23.7953305,19.5625042 24.704283,21.0889665 26.6741377,20.9959971 C29.1032693,21.0301707 29.4239233,18.5444875 29.5364153,16.6321135 C30.2147531,16.6321135 30.8930908,16.6321135 31.5714286,16.6321135 C32.6365492,16.6321135 33.5,15.7686627 33.5,14.7035421 L33.5,7.56376247 C33.5,7.09363315 33.1265191,6.70854238 32.65661,6.6941552 L31.2660341,6.65158001 C30.9276878,6.64122088 30.6195497,6.45420827 30.4541718,6.15885131 L27.2948661,0.516480729 C27.1248317,0.212807382 26.804352,0.024323427 26.4563173,0.0233045132 C23.8029104,0.0155363421 21.1495035,0.00776817106 18.4960967,0 Z" id="路径-3" stroke="url(#linearGradient-1)" stroke-width="1.7" stroke-linejoin="round"></path>
+                <g id="编组-29" transform="translate(0, 6.6226)" stroke-width="1.2">
+                    <path d="M4.65307336,3.05780021 C3.87124759,3.91483377 3.45829256,4.90112572 3.41420829,6.01667606 C3.37012402,7.1322264 3.81699767,8.36101749 4.75482924,9.70304932" id="路径-4" stroke="url(#linearGradient-2)"></path>
+                    <path d="M3.73681476,1.67807639 C2.35101029,2.58261185 1.65810806,4.00241631 1.65810806,5.93748977 C1.65810806,7.87256323 2.29699694,9.47636528 3.57477472,10.7488959" id="路径-4" stroke="url(#linearGradient-3)"></path>
+                    <path d="M2.81556515,0 C0.938521717,1.57771688 0,3.5276194 0,5.84970756 C0,8.17179571 0.87214713,10.2330106 2.61644139,12.0333521" id="路径-4" stroke="url(#linearGradient-4)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,184 @@
+body * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+body {
+  font-family: PingFangSC-Regular, Roboto, Helvetica Neue, Helvetica, Tahoma,
+    Arial, PingFang SC-Light, Microsoft YaHei;
+  margin: 0vw !important;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(
+    #11264c 0%,
+    #101f41 16%,
+    #0f1f41 56%,
+    #020c31 85%,
+    #080a14 100%
+  );
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: url(../image/背景框.png) 0 0 / 100% no-repeat;
+}
+
+.title {
+  align-self: center;
+  height: 7.3333vw;
+  width: 35.7813vw;
+  flex: 0 1;
+  margin-top: 2.1875vw;
+  background: url(../image/标题背景.png) 0 0 / 100% no-repeat;
+  justify-content: center;
+}
+.title .left,
+.title .right {
+  margin-top: 0.2083vw;
+  height: 1.5625vw;
+  width: 1.5625vw;
+  background: url(../image/大标题黄色箭头.svg) center / contain no-repeat;
+}
+.title .right {
+  transform: rotate(180deg);
+}
+.title .text {
+  height: 1.9792vw;
+  width: 19.7917vw;
+  margin: 0 1.0417vw;
+  background: url(../image/挚途高速产品介绍.svg) center / contain no-repeat;
+}
+
+.info {
+  position: absolute;
+  top: 3.3333vw;
+  width: 100vw;
+  height: 1.875vw;
+  font-size: 0.9375vw;
+  color: #e2e8f1;
+  padding: 0 4.1667vw;
+  justify-content: space-between;
+  align-items: center;
+}
+.info .divider {
+  width: 0.0521vw;
+  height: 1.1458vw;
+  border: 0.1042vw solid #477ac8;
+  align-self: center;
+}
+.info .divider__mini {
+  width: 0.0521vw;
+  height: 0.8333vw;
+  border: 0.0521vw solid #2e5da6;
+  margin: 0 0.8333vw;
+}
+.info .left,
+.info .right {
+  display: flex;
+}
+
+.info .text-group {
+  display: flex;
+  align-items: center;
+  height: 1.875vw;
+  margin: 0 0.4167vw;
+  padding: 0 1.25vw;
+  background: linear-gradient(270deg, #122a65 0%, #112159 100%);
+  opacity: 0.77;
+  backdrop-filter: blur(0.0521vw);
+}
+
+.info .logo {
+  width: 6.7708vw;
+  height: 1.0417vw;
+  background: url(../image/logo.svg) center / contain no-repeat;
+}
+.info .location {
+  margin-right: 0.8333vw;
+  display: flex;
+  align-items: center;
+}
+.info .location_icon {
+  margin-right: 0.4167vw;
+  width: 0.7813vw;
+  height: 0.9375vw;
+  background: url(../image/定位.svg) center / contain no-repeat;
+}
+.info .weather {
+  display: flex;
+  align-items: center;
+}
+.info .weather_icon {
+  margin-right: 0.4167vw;
+  width: 0.7813vw;
+  height: 0.9375vw;
+  background: url(../image/晴天.svg) center / contain no-repeat;
+}
+.info .week {
+  margin-right: 0.8333vw;
+}
+
+.content {
+  margin-top: 2.6042vw;
+  margin-bottom: 3.0208vw;
+  padding: 0 3.5417vw 0 3.75vw;
+  width: 100%;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.menu-container {
+  width: 17.2917vw;
+}
+.video-container {
+  width: 74.5833vw;
+  height: 45.5729vw;
+  padding: 0.5208vw;
+  border-radius: 0.3125vw;
+  border: 0.0521vw solid;
+  border-image: linear-gradient(
+      270deg,
+      rgba(62, 114, 186, 1),
+      rgba(84, 135, 205, 1),
+      rgba(52, 102, 171, 1),
+      rgba(51, 102, 171, 1),
+      rgba(62, 114, 186, 1)
+    )
+    1 1;
+
+  background: linear-gradient(135deg, #496ab8 0.3125vw, transparent 0) top left,
+    linear-gradient(-135deg, #496ab8 0.3125vw, transparent 0) top right,
+    linear-gradient(45deg, #496ab8 0.3125vw, transparent 0) bottom left,
+    linear-gradient(-45deg, #496ab8 0.3125vw, transparent 0) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  clip-path: polygon(
+    0 0.4588vw,
+    0.4588vw 0,
+    calc(100% - 0.4588vw) 0,
+    100% 0.4588vw,
+    100% calc(100% - 0.4588vw),
+    calc(100% - 0.4588vw) 100%,
+    0.4588vw 100%,
+    0 calc(100% - 0.4588vw)
+  );
+}
+
+
+.video-container .inner {
+  height: 100%;
+  width: 100%;
+  background: url(../image/4个三角形.svg) center / contain no-repeat;
+}
